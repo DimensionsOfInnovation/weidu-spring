@@ -7,11 +7,13 @@ weidu-spring
 如果有jar包需要引入必须在网站http://mvnrepository.com/
 找到依赖包,具体如下,例如:如果需要mysql连接的Java依赖包;查找得到xml代码段:
 -------------------------------------
+================================
 <dependency>
 	<groupId>mysql</groupId>
 	<artifactId>mysql-connector-java</artifactId>
 	<version>5.1.34</version>
 </dependency>
+=================================
 ---------------------------------------
 放入到pom.xml中,并加以说明
 2.目录结构说明:
