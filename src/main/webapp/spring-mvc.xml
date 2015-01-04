@@ -27,18 +27,18 @@
 		<bean id="dataSource"
 		class="org.apache.commons.dbcp.BasicDataSource"
 		destroy-method="close">
-		<property name="maxIdle" value="${jdbc.maxIdle}"></property>
-		<property name="maxActive" value="${jdbc.maxActive}"></property>
-		<property name="maxWait" value="${jdbc.maxWait}"></property>
-		<property name="minIdle" value="${jdbc.minIdle}"></property>
+		<property name="maxIdle" value="${maxIdle}"></property>
+		<property name="maxActive" value="${maxActive}"></property>
+		<property name="maxWait" value="${maxWait}"></property>
+		<property name="minIdle" value="${minIdle}"></property>
 
 		<property name="driverClassName"
-			value="${jdbc.driverClassName}">
+			value="${driverClassName}">
 		</property>
-		<property name="url" value="${jdbc.url}"></property>
+		<property name="url" value="${url}"></property>
 
-		<property name="username" value="${jdbc.username}"></property>
-		<property name="password" value="${jdbc.password}"></property>
+		<property name="username" value="${username}"></property>
+		<property name="password" value="${password}"></property>
 	</bean>
 	<!-- 使用SimpleJdbcTemplate配置-->	
 	
@@ -59,12 +59,14 @@
 	</bean>
 
 	<!-- 配置mybatis注解 -->
-	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<!-- 扫描路径 -->
+	<!-- 扫描路径 -->
+	<!-- 扫描的注解 -->
+<!-- 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		
 		<property name="basePackage" value="org.wlbbs.dao" />
-		<!-- 扫描的注解 -->
+		
 		<property name="annotationClass" value="org.wlbbs.annotation.MyBatisReponsitory" />
-	</bean>
+	</bean> -->
 
 
 
