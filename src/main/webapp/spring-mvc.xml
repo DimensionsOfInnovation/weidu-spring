@@ -57,7 +57,10 @@
 		<property name="dataSource" ref="dataSource" />
 		<property name="mapperLocations" value="classpath:org/wlbbs/entity/*.xml" />
 	</bean>
-
+<!-- JDBC事物 -->
+<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+<property name="dataSource" ref="dataSource"/>
+</bean>
 	<!-- 配置mybatis注解 -->
 	<!-- 扫描路径 -->
 	<!-- 扫描的注解 -->
@@ -69,7 +72,7 @@
 	</bean> -->
 
 
-
+ 
 	<!-- 配置拦截器 -->
 	<!--  
 	<mvc:interceptors>
