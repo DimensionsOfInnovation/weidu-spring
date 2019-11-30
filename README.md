@@ -1,3 +1,3 @@
 weidu-spring
 ============
-创新型项目,希望有志之士加入
+hello world
